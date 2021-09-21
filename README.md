@@ -19,7 +19,7 @@
 
 ## About the Project
 
-In this [`Django Project`](https://github.com/sinjoysaha/django-booklist) I try to build a book collection web app and demonstrate my skills in Django. The web app provides information such as `Title`, `Author`, `Average Rating`,  `ISBN`, `ISBN13`, `Number of Pages`, `Number od Ratings`, `Number of Reviews`,  `Publisher`, `Publication Date`. 
+In this [`Django Project`](https://github.com/sinjoysaha/django-booklist) I try to build a book collection web app and demonstrate my skills in Django. The web app provides information such as `Title`, `Author`, `Average Rating`,  `ISBN`, `ISBN13`, `Number of Pages`, `Number of Ratings`, `Number of Reviews`,  `Publisher`, `Publication Date`. 
 
 The data is taken from this Kaggle [dataset](https://www.kaggle.com/jealousleopard/goodreadsbooks) - Original Source: Goodreads. 
 
