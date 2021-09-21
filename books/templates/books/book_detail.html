@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <!-- <p>{% if object.description != None and object.description != '' %}
+        {{ object.description}}
+        {% else %}
+        Description Coming Soon
+        {% endif %}
+        </p>
+        {{ object.price }} -->
+    <div class="jumbotron mx-3 px-5 py-4">
+        <h1 class="display-4">{{ object.title }}</h1>
+        <p class="lead">- {{ object.author }}</p>
+        <hr class="my-4">
+        <p> Average Rating - {{ object.avg_rating }} </p>
+        <p> ISBN - {{ object.isbn }}</p>
+        <p> ISBN 13 -{{ object.isbn13 }}</p>
+        <p> Language - {{ object.lang }}</p>
+        <p> Numbere of Pages - {{ object.num_pages }}</p>
+        <p> Number of Rating - {{ object.ratings_count }}</p>
+        <p> Number of Reviews - {{ object.reviews_count }}</p>
+        <p> Publication Date  - {{ object.pub_date }}</p>
+        <p> Publisher - {{ object.publisher }}</p>
+        <div class="d-flex justify-content-between">
+            <a class="btn btn-primary btn-lg " href="../" role="button">Back</a>
+        <!-- </div>
+        <div class="d-flex justify-content-left"> -->
+            <a class="btn btn-outline-primary btn-lg " href="https://www.google.com/search?q={{ object.title }}" target="blank"
+                role="button">Learn more</a>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
