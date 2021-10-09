@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% block title %} Book Detail {% endblock %}
+
 {% block content %}
 <div class="container">
     <!-- <p>{% if object.description != None and object.description != '' %}
@@ -17,7 +19,7 @@
         <p> ISBN - {{ object.isbn }}</p>
         <p> ISBN 13 -{{ object.isbn13 }}</p>
         <p> Language - {{ object.lang }}</p>
-        <p> Numbere of Pages - {{ object.num_pages }}</p>
+        <p> Number of Pages - {{ object.num_pages }}</p>
         <p> Number of Rating - {{ object.ratings_count }}</p>
         <p> Number of Reviews - {{ object.reviews_count }}</p>
         <p> Publication Date  - {{ object.pub_date }}</p>
