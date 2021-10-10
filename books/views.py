@@ -20,9 +20,11 @@ def book_list_view(request):
 def book_create_view(request):
     form = BookForm(request.POST or None)
     if form.is_valid():
-        form.save()
-        form = BookForm()
+        obj_saved = form.save()
+        return redirect(f'../{obj_saved.id}/')
+
     context = {
+        'title': 'New Book',
         'form': form
     }
     return render(request, "books/book_create.html", context)
@@ -32,7 +34,10 @@ def book_update_view(request, id=id):
     form = BookForm(request.POST or None, instance=obj)
     if form.is_valid():
         form.save()
+        return redirect('../')
+
     context = {
+        'title': 'Edit Book',
         'form': form
     }
     return render(request, "books/book_create.html", context)

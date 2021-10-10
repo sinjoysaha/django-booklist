@@ -1,9 +1,22 @@
 {% extends 'base.html' %}
 
-{% block content %} 
-    <form action="." method="POST"> {% csrf_token %}
-        {{ form.as_p }}
+{% block title %} {{ title }} {% endblock %}
 
-        <input type="submit" value="Save" />
-    </form>
+{% block content %}
+
+<div class="container py-5">
+    <div class="d-flex justify-content-center mb-3 mx-1">
+        <form action="." method="POST">
+            {% csrf_token %}
+            <table class="table table-striped">
+                {{ form.as_table }}
+            </table>
+
+            <div class="d-flex justify-content-between">
+                <a class="btn btn-primary btn-lg" href="../" role="button">Cancel</a>
+                <input class="btn btn-success btn-lg" type="submit" value="Save" />
+            </div>
+        </form>
+    </div>
+</div>
 {% endblock %}
